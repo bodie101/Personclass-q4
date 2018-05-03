@@ -1,8 +1,8 @@
 using System;
 
 namespace personq4
-{
-    class Person 
+{           
+        class Person 
     {
         public string FirstName {get; set;}
         public string LastName {get; set;}
@@ -28,7 +28,7 @@ namespace personq4
             return age; 
             }
 
-            public string PersonInfo()
+            public virtual string PersonInfo()
             {
                 return $"Person: {GetFullName()} is {GetAge()} years old"; 
             } 
