@@ -16,15 +16,19 @@ namespace personq4
     }
       
 
-//enerate random student ID
-        public void EnrollStudent() {
 
-            var rand = new Random();
-            SID = rand.Next(1000, 9999);
+        public string EnrollStudent() {
+
+             var rand = new Random();
+             SID = rand.Next(1000, 9999);
+
+             return $"{SID}"; 
+
+             
         }
 
         public override string PersonInfo() {
-            return $"Person: {GetFullName()} of {GetCampus()} campus has a student id of {SID}";
+            return $"Person: {GetFullName()} of {GetCampus()} campus has a student id of {EnrollStudent()}";
         }
     }
 }
